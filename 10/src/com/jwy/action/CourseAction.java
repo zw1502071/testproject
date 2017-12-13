@@ -99,14 +99,9 @@ public class CourseAction extends DispatchAction {
 	public ActionForward courseInfo(ActionMapping mapping, ActionForm form,HttpServletRequest request, HttpServletResponse response) {
 		Integer id = Integer.valueOf(request.getParameter("id"));
 		Course course = courseDao.findByID(id);  
-		// add by zhaowen 
-		System.out.println("testllll");
+		Specialty specialty = specialtyDao.findById(course.getSpecialtyId());
+		request.setAttribute("course", course); 
+		request.setAttribute("specialty", specialty);
 		return mapping.findForward("courseInfo"); 
-	}
-	
-	
-
-	public void test() {
-		System.out.println("hello");
 	}
 }
