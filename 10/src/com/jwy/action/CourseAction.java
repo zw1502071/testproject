@@ -102,6 +102,8 @@ public class CourseAction extends DispatchAction {
 		Specialty specialty = specialtyDao.findById(course.getSpecialtyId());
 		request.setAttribute("course", course); 
 		request.setAttribute("specialty", specialty);
+		System.out.println("hello");
 		return mapping.findForward("courseInfo"); 
+		
 	}
 }
