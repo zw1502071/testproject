@@ -109,5 +109,6 @@ public class CourseAction extends DispatchAction {
 	
 	public void test() {
 		System.out.println(99);
+		System.out.println(99);
 	}
 }
