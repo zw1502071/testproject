@@ -106,4 +106,8 @@ public class CourseAction extends DispatchAction {
 		return mapping.findForward("courseInfo"); 
 		
 	}
+	
+	public void test() {
+		System.out.println(99);
+	}
 }
